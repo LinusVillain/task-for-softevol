@@ -10,7 +10,7 @@
                 src: url(https://www.microsoft.com/mwf/_h/v3.54/mwf.app/fonts/mwfmdl2-v3.54.woff);
             }
 
-            body {margin: 0; padding: 0; font-family: "Segoe UI", "Helvetica Neue", sans-serif; font-size: 13px; color: #000000; background-color: lightgray;}
+            body {margin: 0; padding: 0; font-family: Segoe UI, "Helvetica Neue", sans-serif; font-size: 13px; color: #000000; background-color: #f0ecec7c;}
             p {margin: 0; padding: 0;}
             a {color: #000000; text-decoration: none;}
             ul {margin: 0; padding: 0; list-style: none;}
@@ -38,6 +38,82 @@
 
             .sign-in {position: absolute; right: 20px; padding: 12px 8px 8px 8px}
             .sign-im__img {position: relative; width: 32px; height: 32px; border-radius: 50%; background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='%23707070'%3E%3Cg class='mectrl_stroke' stroke-width='1.9' fill='none'%3E%3Ccircle cx='32' cy='32' r='30.25'/%3E%3Cg transform='matrix(1.1 0 0 1.1 8.8 5.61)'%3E%3Ccircle class='mectrl_stroke' cx='20' cy='16' r='7'/%3E%3Cpath class='mectrl_stroke' d='M30 35h10m-5-5v10M30.833 32.09A11 11 0 009 34'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+
+            @media (min-width: 860px) {
+                
+                .page-header {margin: 0;}
+                .page-header__wrapper {margin: 0; padding: 0 24px; border: none;}
+
+                .mobile-main-menu {display: none;}
+
+                .main-logo {display: block; position: relative; left: 0; padding: 15px 6px 16px 9px;}
+
+                .product {position: relative; top: 0; width: auto; margin-top: 10px; padding: 8px 6px 2px 10px; border-bottom: none; font-size: 18px; line-height: 20px;}
+                .product::before {display: inline-block; position: absolute; height: 24px; content: ""; margin-left: 10px; top: 6px; border-left: 2px solid black;}
+                .product::after {display: none}
+                .product__link {display: block; margin-left: 30px;}
+                .product:hover > .product__link {border-bottom: 2px solid black;}
+
+
+                .main-nav__menu {display: flex;}
+                .main-nav__item {display: flex; position: relative; padding: 20px 20px 10px 15px; color: #000000; cursor: pointer;}
+                .main-nav__item-link {position: relative; padding-bottom: 3px;}
+                .main-nav__item:hover > .main-nav__item-link {border-bottom: 2px solid black;}
+                .second-step, .third-step, .fourth-step {display: none;}
+                .main-nav__item::after {display: inline-block; position: absolute; right: 6px; width: auto; height: auto; content: '\e70d'; font-family: MWF-MDL2; font-size: 8px; line-height: 25px; font-weight: 700; cursor: pointer;}
+                .main-nav__item--last-item::after {display: none;}
+
+                .user-interaction {width: auto; margin-left: auto;}
+
+                .microsoft-activities {display: block; position: relative; padding: 20px 34px 10px 12px; color: #262626; cursor: pointer;}
+                .microsoft-activities::after {display: inline-block; position: absolute; left: 92px; width: auto; height: auto; content: '\e70d'; font-family: MWF-MDL2; font-size: 8px; line-height: 25px; font-weight: 700; vertical-align: middle;}
+                .microsoft-activities__link {padding-bottom: 4px;}
+                .microsoft-activities:hover > .microsoft-activities__link {border-bottom: 2px solid black;}
+
+                .search-form__label {display: flex; position: relative; margin-left: 0; margin-right: 8px;}
+                .search-form__label::before {display: inline-block; width: 16px; height: 18px; margin-left: 8px; content: '\e721'; font-family: MWF-MDL2; font-size: 16px; line-height: 56px;}
+                .search-form__label:hover + .search-form__prompt {display: block; position: absolute; right: 13.5%; top: 5px; background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 2px #777; color: #333;  font-size: 12px; max-width: 328px; line-height: normal; overflow-wrap: break-word; padding: 2px; z-index: 2; margin-top: 35px;}
+
+                .shopping-cart {position: relative; right: 0;}
+                .shopping-cart:hover > .shopping-cart__prompt {display: block; position: fixed; right: 8.5%; top: 4px; background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 2px #777; color: #333;  font-size: 12px; max-width: 328px; line-height: normal; overflow-wrap: break-word; padding: 2px; z-index: 2; margin-top: 35px;}
+
+                .sign-in {position: relative; right: 0; padding-right: 13px;}
+            }
+
+            @media (min-width: 912px) {
+                .second-step {display: flex;}
+            }
+
+            @media (min-width: 1012px) {
+                .third-step {display: flex;}
+            }
+
+            @media (min-width: 1084px) {
+                .page-header__wrapper {padding: 0 5%;}
+            }
+
+            @media (min-width: 1050px) {
+                .fourth-step {display: flex;}
+                .last-step {display: none;}
+            }
+            
+            @media (min-width: 1400px) {
+                .microsoft-activities {padding-right: 10px;}
+
+                .search-form__label {margin-right: 0; padding: 20px 37px 1px 20px}
+                .search-form__label span {display: block; cursor: pointer;}
+                .search-form__label::before {display: inline-block; position: absolute; left: 57px; top: 2px; font-size: 16px; line-height: 56px;}
+                .search-form:hover > .search-form__label > .search-form__title {border-bottom: 2px solid black;}
+
+                .shopping-cart {padding-right: 36px;}
+                .shopping-cart__title {display: block;}
+                .shopping-cart::after {display: inline-block; position: absolute; left: 40px; top: 20px; font-size: 16px; line-height: 16px;}
+                .shopping-cart:hover > .shopping-cart__title {border-bottom: 2px solid black;}
+
+                .sign-in {display: flex; padding: 20px 8px 8px 8px}
+                .sign-in span {display: block}
+                .sign-im__img {margin-top: -7px; margin-right: 3px; margin-left: 13px;}
+            }
         </style>
     </head>
 
@@ -50,8 +126,7 @@
                 </a>
 
                 <a href="#" class="main-logo">
-                    <img class="main-logo__img" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft Logo" width="108" height="23
-                    ">
+                    <img class="main-logo__img" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft Logo" width="108" height="23">
                 </a>
 
                 <p class="product">
@@ -60,19 +135,22 @@
 
                 <nav class="main-nav">
                     <ul class="main-nav__menu">
-                        <li class="main-nav__item">
+                        <li class="main-nav__item first-step">
                             <a href="#" class="main-nav__item-link">Computers</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item second-step">
                             <a href="#" class="main-nav__item-link">Computers for Business</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item third-step">
                             <a href="#" class="main-nav__item-link">Accessories</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item first-step last-step">
+                            <a href="#" class="main-nav__item-link">More</a>
+                        </li>
+                        <li class="main-nav__item fourth-step">
                             <a href="#" class="main-nav__item-link">Shop now</a>
                         </li>
-                        <li class="main-nav__item">
+                        <li class="main-nav__item main-nav__item--last-item fourth-step">
                             <a href="#" class="main-nav__item-link">Support</a>
                         </li>
                     </ul>
@@ -86,7 +164,7 @@
 
                     <form action="#" method="POST" class="search-form">
                         <input type="search" id="search-input" class="search-form__input">
-                        <label for="search-input" class="search-form__label"><span>Search</span></label>
+                        <label for="search-input" class="search-form__label"><span class="search-form__title">Search</span></label>
                         <span class="search-form__prompt">Search Microsoft.com</span>
                     </form>
 
